@@ -16,7 +16,6 @@ variable "name" {
 variable "workload" {
   description = "Name of the workload."
   type        = string
-  default     = "studocu"
 }
 
 variable "team" {
