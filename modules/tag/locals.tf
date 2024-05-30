@@ -1,8 +1,8 @@
 locals {
   default_tags = {
-    Name         = join("-", [var.workload, var.environment, var.name])
+    Name         = join("-", [var.workload, var.utilization])
+    Utilization  = var.utilization
     Description  = var.description
-    Environment  = var.environment
     Workload     = var.workload
     Region       = data.aws_region.current.name
     Team         = var.team
