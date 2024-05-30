@@ -3,18 +3,13 @@ variable "description" {
   type        = string
 }
 
-variable "environment" {
-  description = "The environment where the resource will be created."
-  type        = string
-}
-
-variable "name" {
-  description = "Name of the resource."
+variable "utilization" {
+  description = "The utilization of the resource."
   type        = string
 }
 
 variable "workload" {
-  description = "Name of the workload."
+  description = "Name of the AWS workload."
   type        = string
 }
 
