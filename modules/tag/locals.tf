@@ -13,6 +13,7 @@ locals {
 
   default_tags = {
     Name        = join("-", [var.workload, local.region_short_codes[local.region], local.environment, var.utilization])
+    Prefix      = join("-", [var.workload, local.region_short_codes[local.region], local.environment])
     CostCenter  = var.costcenter
     Description = var.description
     Environment = local.environment
