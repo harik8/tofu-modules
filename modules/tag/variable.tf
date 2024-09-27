@@ -29,6 +29,7 @@ variable "postfix" {
 variable "utilization" {
   description = "The utilization of the resource."
   type        = string
+  default     = ""
 }
 
 variable "workload" {
