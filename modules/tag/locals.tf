@@ -3,7 +3,7 @@ locals {
   environment = var.environment == "" ? terraform.workspace : var.environment
 
   default_tags = {
-    Name        = join("-", [var.workload, local.environment, var.utilization])
+    Name        = var.utilization == "" ? join("-", [var.workload, local.environment]) : join("-", [var.workload, local.environment, var.utilization])
     Prefix      = join("-", [var.workload, local.environment])
     CostCenter  = var.costcenter
     Description = var.description
